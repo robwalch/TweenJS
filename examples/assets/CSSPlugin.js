@@ -1,8 +1,9 @@
 /*
-* CSSPlugin
-* Visit http://createjs.com/ for documentation, updates and examples.
+* CSSPlugin by Grant Skinner. Mar 7, 2011
+* Visit http://easeljs.com/ for documentation, updates and examples.
 *
-* Copyright (c) 2010 gskinner.com, inc.
+*
+* Copyright (c) 2010 Grant Skinner
 * 
 * Permission is hereby granted, free of charge, to any person
 * obtaining a copy of this software and associated documentation
@@ -26,12 +27,19 @@
 * OTHER DEALINGS IN THE SOFTWARE.
 */
 
+/**
+ * The Tween Javascript library provides a retained graphics mode for canvas 
+ * including a full, hierarchical display list, a core interaction model, and 
+ * helper classes to make working with Canvas much easier.
+ * @module TweenJS
+ **/
+
 (function(window) {
 /**
- * TODO.
- * @protected
+ * A plugin to help TweenJS tween CSS properties.
  * @class CSSPlugin
  * @constructor
+ * @protected
  **/
 var CSSPlugin = function() {
   throw("CSSPlugin cannot be instantiated.")
@@ -54,7 +62,9 @@ var p = CSSPlugin.prototype;
 	CSSPlugin.priority = -100; // very low priority, should run last
 
 	/**
-	 * 
+	 * Install the plugin
+	 * @method install
+	 * @protected
 	 **/
 	CSSPlugin.install = function() {
 		var arr = [], map = CSSPlugin.cssSuffixMap;
@@ -63,7 +73,9 @@ var p = CSSPlugin.prototype;
 	}
 	
 	/**
-	 * 
+	 * Initialize the plugin
+	 * @method init
+	 * @protected
 	 **/
 	CSSPlugin.init = function(tween, prop, value) {
 		var sfx0,sfx1,style,map = CSSPlugin.cssSuffixMap;
@@ -79,7 +91,9 @@ var p = CSSPlugin.prototype;
 	}
 	
 	/** 
-	 * 
+	 * Apply the plugin properties on a tween
+	 * @method tween
+	 * @protected
 	 **/
 	CSSPlugin.tween = function(tween, prop, value, startValues, endValues, ratio, position, end) {
 		var style,map = CSSPlugin.cssSuffixMap;

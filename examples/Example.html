@@ -2,9 +2,11 @@
 <html>
 <head>
 <title>TweenJS: Canvas Tweening Example</title>
-<script src="../lib/easel.js"></script>
-<script src="../src/tweenjs/Tween.js"></script>
-<script src="../src/tweenjs/Ease.js"></script>
+
+	<link rel="stylesheet" href="assets/demoStyles.css" />
+	<script src="http://code.createjs.com/easeljs-0.4.2.min.js"></script>
+	<script src="http://code.createjs.com/tweenjs-0.2.0.min.js"></script>
+	<script src="assets/Ease.js"></script>
 <script>
 function init() {
 	canvas = document.getElementById("canvas1");
@@ -70,7 +72,13 @@ function init() {
 </head>
 
 <body onload="init();" style="background-color:#D4D4D4">
-	<canvas id="canvas1" width="500" height="500" style="background-color:#d6d6d6"></canvas><br/>
+
+	<header id="header" class="TweenJS">
+	    <h1><span class="text-product">Tween<strong>JS</strong></span> TweenJS Example</h1>
+	    <p>This example shows how to use TweenJS, including animation, delays, and function calls</p>
+	</header>
+
+	<canvas id="canvas1" width="960" height="350" style="background-color:#d6d6d6"></canvas><br/>
 	<input type="button" value="toggle paused" onclick="Ticker.setPaused(!Ticker.getPaused());"
 </body>
 </html>

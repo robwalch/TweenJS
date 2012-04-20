@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>TweenJS: Canvas Tweening Example</title>
-<script src="../lib/easel.js"></script>
-<script src="../src/tweenjs/Ease.js"></script>
+<title>TweenJS: Spark Table</title>
+	<link rel="stylesheet" href="assets/demoStyles.css" />
+	<script src="http://code.createjs.com/easeljs-0.4.2.min.js"></script>
+	<script src="assets/Ease.js"></script>
 <script>
 
 var eases = [Ease.none,Ease.quadIn,Ease.getPowIn(2.5),Ease.cubicIn,Ease.quartIn,Ease.quintIn];
 
 function init() {
+	if (window.top != window) {
+		document.getElementById("header").style.display = "none";
+	}
+
 	canvas = document.getElementById("canvas1");
 	stage = new Stage(canvas);
 
@@ -35,9 +40,15 @@ function init() {
 </script>
 </head>
 
-<body onload="init();" style="background-color:#D4D4D4">
-	<canvas id="canvas1" width="500" height="500" style="background-color:#d6d6d6"></canvas><br/>
-	You can edit this file to test different easing equations.
+<body onload="init();">
+
+	<header id="header" class="TweenJS">
+	    <h1><span class="text-product">Tween<strong>JS</strong></span> CSS Plugin Example</h1>
+	    <p>You can edit this example to test different ease functions.</p>
+	</header>
+
+	<canvas id="canvas1" width="960" height="400"></canvas>
+
 </body>
 </html>
 		

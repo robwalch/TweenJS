@@ -1,8 +1,10 @@
 /*
-* Ease
-* Visit http://createjs.com/ for documentation, updates and examples.
+* Ease by Grant Skinner. Oct 27, 2011
+* Visit http://easeljs.com/ for documentation, updates and examples.
 *
-* Copyright (c) 2010 gskinner.com, inc.
+* Equations derived from work by Robert Penner.
+*
+* Copyright (c) 2011 Grant Skinner
 * 
 * Permission is hereby granted, free of charge, to any person
 * obtaining a copy of this software and associated documentation
@@ -25,6 +27,14 @@
 * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 * OTHER DEALINGS IN THE SOFTWARE.
 */
+
+/**
+* The Tween Javascript library provides a retained graphics mode for canvas 
+* including a full, hierarchical display list, a core interaction model, and 
+* helper classes to make working with Canvas much easier.
+* @module TweenJS
+**/
+
 
 (function(window) {
 
@@ -49,7 +59,7 @@ var Ease = function() {
 }
 
 // public static methods:
-	/** 
+	/**
 	 * @method linear
 	 * @static
 	 **/
